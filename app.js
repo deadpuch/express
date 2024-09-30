@@ -4,7 +4,9 @@ const router = require("./router/main");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/", router);
+app.use("/", router,(req,res)=>{
+  res.send("Hello World")
+});
 
 app.use(error);
 
